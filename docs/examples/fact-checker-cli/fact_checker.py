@@ -67,7 +67,7 @@ class FactChecker:
         Returns:
             The API key if found, empty string otherwise.
         """
-        api_key = os.environ.get("PPLX_API_KEY", "")
+        api_key = os.environ.get("PERPLEXITY_API_KEY", "")
         if api_key:
             return api_key
 
@@ -130,7 +130,7 @@ class FactChecker:
         data = {
             "model": model,
             "messages": [
-                {"role": "system", "content": self.system_prompt},
+   		{"role": "system", "content": self.system_prompt},
                 {"role": "user", "content": user_prompt}
             ]
         }
